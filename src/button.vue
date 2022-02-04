@@ -9,9 +9,11 @@
 </template>
 
 <script>
+import Icon from "./icon"
 export default {
   name: "Button",
   // props:['icon','iconPosition']
+  components: {'g-icon': Icon},
   props:{
     icon:[],
     loading:{
