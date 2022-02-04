@@ -14,7 +14,7 @@ module.exports = {
                 title: '组件',
                 children: [
                     "/components/button",
-                    // "/components/input",
+                    "/components/input",
                 ],
                 initialOpenGroupIndex: -1 // 可选的, 默认值是 0
             }
