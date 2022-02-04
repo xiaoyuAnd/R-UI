@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/xiaoyuAnd/R-UI/issues"
   },
-  "homepage": "https://github.com/xiaoyuAnd/R-UI#readme"
+  "homepage": "https://github.com/xiaoyuAnd/R-UI#readme",
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
 }
