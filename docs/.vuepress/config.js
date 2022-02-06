@@ -1,24 +1,40 @@
 module.exports = {
-    title: '轱辘UI',
+    // base: /R-UI/,
+    base: '/R-UI/',
+    title: 'R-UI',
     description: '一个好用的UI框架',
     themeConfig: {
+        displayAllHeaders: true,
+        nav: [
+            { text: '主页', link: '/' },
+            { text: '文档', link: '/guide/' },
+            { text: 'github', link: 'https://github.com/xiaoyuAnd/R-UI/tree/main' },
+        ],
         sidebar: [
             {
-                // path: '/install/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-                collapsable: true, // 可选的, 默认值是 true,
-                sidebarDepth: 1,    // 可选的, 默认值是 1
-                title: '入门',
-                children: [ '/install/','/get-start/'],
+                title:'入门',
+                collapsable: false, // 可选的, 默认值是 true,
+                children: [
+                    '/install/',
+                    '/get-start/',
+                ]
             },
             {
                 title: '组件',
+                collapsable: false, // 可选的, 默认值是 true,
+                sidebarDepth: 0,    // 可选的, 默认值是 1
                 children: [
-                    "/components/button",
-                    "/components/input",
+                    '/components/button',
+                    '/components/input',
+                    // '/components/grid',
+                    // '/components/layout',
+                    // '/components/tabs',
+                    // '/components/popover',
+                    // '/components/toast',
+                    // '/components/collapse',
                 ],
-                initialOpenGroupIndex: -1 // 可选的, 默认值是 0
             }
-        ]
+        ],
     },
     // module: {
     //     rules: [
