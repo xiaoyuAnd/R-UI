@@ -11,11 +11,11 @@ title: 'Input - 输入框'
 ## 使用方法
 ```vue
 <template>
-  <g-input value="value"></g-input>
-  <g-input value="value" disabled></g-input>
-  <g-input value="value" readonly></g-input>
-  <g-input value="value" error="姓名不能少于两个字"></g-input>
-  <g-input value="value" @change="inputChange"></g-input>
+  <g-input value="默认"></g-input>
+  <g-input value="禁用" disabled></g-input>
+  <g-input value="只读" readonly></g-input>
+  <g-input value="error" error="姓名不能少于两个字"></g-input>
+  <g-input value="监听内容变化" @change="inputChange"></g-input>
   <g-input value="双向绑定" v-model="message"></g-input>
   value:{{ message }}
   <button @click="message+=1">+1</button>

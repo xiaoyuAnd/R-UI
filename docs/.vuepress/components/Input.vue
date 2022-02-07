@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="box">
-      <g-input value="默认输入框">1</g-input>
-      <g-input value="禁用输入框" disabled>2</g-input>
-      <g-input value="只读输入框" readonly>3</g-input>
-      <g-input value="监听内容变化输入框" @change="inputChange"></g-input>
+      <g-input value="默认">1</g-input>
+      <g-input value="禁用" disabled>2</g-input>
+      <g-input value="只读" readonly>3</g-input>
+      <g-input value="监听内容变化" @change="inputChange"></g-input>
     </div>
     <div class="box">
-      <g-input value="error提示" error="姓名不能少于两个字"></g-input>
+      <g-input value="error" error="姓名不能少于两个字"></g-input>
     </div>
     <div class="box">
 
