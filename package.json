@@ -1,6 +1,6 @@
 {
-  "name": "r-ui",
-  "version": "0.0.1",
+  "name": "r-ui-1-1",
+  "version": "1.0.0",
   "description": "vue,ui",
   "main": "index.js",
   "scripts": {
