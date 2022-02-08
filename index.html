@@ -49,95 +49,98 @@
     </g-button-group>
 
 
-    <div class="box">
-        <g-input value="zhang">1</g-input>
-        <g-input value="wang" disabled>2</g-input>
-        <g-input value="boli" readonly>3</g-input>
-    </div>
-    <div class="box">
-        <g-input value="limei" error="姓名不能少于两个字"></g-input>
-    </div>
-    <div class="box">
-        <g-input value="limei" @change="inputChange"></g-input>
-    </div>
-    <div class="box">
-        <g-input value="zhang" v-model="message"></g-input>
-        {{ message }}
-        <button @click="message+=1">+1</button>
-    </div>
+<!--    <div class="box">-->
+<!--        <g-input value="zhang">1</g-input>-->
+<!--        <g-input value="wang" disabled>2</g-input>-->
+<!--        <g-input value="boli" readonly>3</g-input>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--        <g-input value="limei" error="姓名不能少于两个字"></g-input>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--        <g-input value="limei" @change="inputChange"></g-input>-->
+<!--    </div>-->
+<!--    <div class="box">-->
+<!--        <g-input value="zhang" v-model="message"></g-input>-->
+<!--        {{ message }}-->
+<!--        <button @click="message+=1">+1</button>-->
+<!--    </div>-->
 
-    <br>
-    <div style="border: 1px solid #000">
-        <g-row gutter="10">
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-        </g-row>
-        <g-row gutter="20">
-            <g-col span="2">12</g-col>
-            <g-col span="22">12</g-col>
-        </g-row>
-        <g-row>
-            <g-col>1</g-col>
-            <g-col>2</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">12</g-col>
-            <g-col span="22">12</g-col>
+<!--    <br>-->
+<!--    <div style="border: 1px solid #000">-->
+<!--        <g-row gutter="10">-->
+<!--            <g-col>1</g-col>-->
+<!--            <g-col>2</g-col>-->
+<!--        </g-row>-->
+<!--        <g-row gutter="20">-->
+<!--            <g-col span="2">12</g-col>-->
+<!--            <g-col span="22">12</g-col>-->
+<!--        </g-row>-->
+<!--        <g-row>-->
+<!--            <g-col>1</g-col>-->
+<!--            <g-col>2</g-col>-->
+<!--        </g-row>-->
+<!--        <g-row>-->
+<!--            <g-col span="2">12</g-col>-->
+<!--            <g-col span="22">12</g-col>-->
 
-        </g-row>
-        <g-row>
-            <g-col span="2">12</g-col>
-            <g-col span="20" offset="2">12</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">12</g-col>
-            <g-col span="10" offset="2">12</g-col>
-            <g-col span="8" offset="2">12</g-col>
-        </g-row>
-        <g-row>
-            <g-col span="2">1</g-col>
-            <g-col span="6" offset="4">2</g-col>
-            <g-col span="6" offset="6">3</g-col>
-        </g-row>
-    </div>
-    <g-layout class="layout">
-        <g-sider class="dome sider">sider</g-sider>
+<!--        </g-row>-->
+<!--        <g-row>-->
+<!--            <g-col span="2">12</g-col>-->
+<!--            <g-col span="20" offset="2">12</g-col>-->
+<!--        </g-row>-->
+<!--        <g-row>-->
+<!--            <g-col span="2">12</g-col>-->
+<!--            <g-col span="10" offset="2">12</g-col>-->
+<!--            <g-col span="8" offset="2">12</g-col>-->
+<!--        </g-row>-->
+<!--        <g-row>-->
+<!--            <g-col span="2">1</g-col>-->
+<!--            <g-col span="6" offset="4">2</g-col>-->
+<!--            <g-col span="6" offset="6">3</g-col>-->
+<!--        </g-row>-->
+<!--    </div>-->
+<!--    <g-layout class="layout">-->
+<!--        <g-sider class="dome sider">sider</g-sider>-->
 
-        <g-layout>
-            <g-header class="dome">header</g-header>
-            <g-content class="dome">content</g-content>
-            <g-footer class="dome">footer</g-footer>
-        </g-layout>
+<!--        <g-layout>-->
+<!--            <g-header class="dome">header</g-header>-->
+<!--            <g-content class="dome">content</g-content>-->
+<!--            <g-footer class="dome">footer</g-footer>-->
+<!--        </g-layout>-->
 
-    </g-layout>
-    <g-tabs :selected.sync="selectedTab" direction="horizontal">
-        <g-tabs-head>
-            <g-tabs-item name="woman">
-                <g-icon name="loading"></g-icon>
-                美女
-            </g-tabs-item>
-            <g-tabs-item name="finance" disabled>
-                财经
-            </g-tabs-item>
-            <g-tabs-item name="sports">
-                体育
-            </g-tabs-item>
-            <template v-slot:actions>
-                <button>zhang</button>
-            </template>
-        </g-tabs-head>
-        <g-tabs-body>
-            <g-tabs-pane name="woman">
-                美女相关咨询
-            </g-tabs-pane>
-            <g-tabs-pane name="finance">
-                财经相关咨询
-            </g-tabs-pane>
-            <g-tabs-pane name="sports">
-                体育相关咨询
-            </g-tabs-pane>
-        </g-tabs-body>
-    </g-tabs>
+<!--    </g-layout>-->
+<!--    <g-tabs :selected.sync="selectedTab" direction="horizontal">-->
+<!--        <g-tabs-head>-->
+<!--            <g-tabs-item name="woman">-->
+<!--                <g-icon name="loading"></g-icon>-->
+<!--                美女-->
+<!--            </g-tabs-item>-->
+<!--            <g-tabs-item name="finance" disabled>-->
+<!--                财经-->
+<!--            </g-tabs-item>-->
+<!--            <g-tabs-item name="sports">-->
+<!--                体育-->
+<!--            </g-tabs-item>-->
+<!--            <template v-slot:actions>-->
+<!--                <button>zhang</button>-->
+<!--            </template>-->
+<!--        </g-tabs-head>-->
+<!--        <g-tabs-body>-->
+<!--            <g-tabs-pane name="woman">-->
+<!--                美女相关咨询-->
+<!--            </g-tabs-pane>-->
+<!--            <g-tabs-pane name="finance">-->
+<!--                财经相关咨询-->
+<!--            </g-tabs-pane>-->
+<!--            <g-tabs-pane name="sports">-->
+<!--                体育相关咨询-->
+<!--            </g-tabs-pane>-->
+<!--        </g-tabs-body>-->
+<!--    </g-tabs>-->
+    <g-button @click="top">上方弹出</g-button>
+    <g-button @click="middle">中间弹出</g-button>
+    <g-button @click="bottom" >下方弹出</g-button>
 </div>
 
 <script>
