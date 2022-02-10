@@ -20,9 +20,9 @@ title: 'Toast - 弹出提示框'
 
 <template>
   <div>
-    <i-button @click="top">上方弹出</i-button>
-    <i-button @click="middle">中间弹出</i-button>
-    <i-button @click="bottom">下方弹出</i-button>
+    <g-button @click="top">上方弹出</g-button>
+    <g-button @click="middle">中间弹出</g-button>
+    <g-button @click="bottom">下方弹出</g-button>
   </div>
 </template>
 <script>

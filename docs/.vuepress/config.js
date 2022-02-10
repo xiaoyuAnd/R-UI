@@ -7,8 +7,8 @@ module.exports = {
         displayAllHeaders: true,
         nav: [
             { text: '主页', link: '/' },
-            { text: '文档', link: '/guide/' },
-            { text: 'github', link: 'https://github.com/xiaoyuAnd/R-UI/tree/main' },
+            { text: '文档', link: '/install/' },
+            { text: 'github', link: 'https://github.com/xiaoyuAnd/R-UI' },
         ],
         sidebar: [
             {

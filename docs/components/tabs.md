@@ -70,7 +70,7 @@ export default {
 
 ## 使用方法
 
-此组件的 g-tabs g-tabs-item g-tabs-pane 必须有一一对应的 name。
+此组件的 g-tabs g-tabs-item g-tabs-pane 必须有一一对应的 name。(禁用Tab选项)
 
 ```vue
 
