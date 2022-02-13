@@ -59,7 +59,7 @@ export default {
     ```vue
     <template>
       <div>
-        <i-button @click="auto">自动关闭的 Toast</i-button>
+        <g-button @click="auto">自动关闭的 Toast</g-button>
       </div>
     </template>
     <script>
@@ -69,7 +69,7 @@ export default {
       import plugin from '../../../src/plugin'
       Vue.use(plugin)
       export default {
-        components: { 'i-toast': Toast, 'i-button': Button },
+        components: { 'g-toast': Toast, 'g-button': Button },
         methods: {
           auto() { this.$toast('我是 toast 内容', { autoClose: 5, }) }
         }
@@ -82,7 +82,7 @@ export default {
     ```vue
     <template>
       <div>
-        <i-button @click="auto">点我</i-button>
+        <g-button @click="auto">点我</g-button>
       </div>
     </template>
     <script>
@@ -93,7 +93,7 @@ export default {
 
       Vue.use(plugin)
       export default {
-        components: {'i-toast': Toast, 'i-button': Button},
+        components: {'g-toast': Toast, 'g-button': Button},
         methods: {
           auto() {
             this.$toast('我是 toast 内容', 
