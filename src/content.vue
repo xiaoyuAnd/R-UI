@@ -6,12 +6,13 @@
 
 <script>
 export default {
-  name: "Content"
-}
+  name: "Content",
+  // name: "Content"
+};
 </script>
 
 <style scoped>
-.content{
+.content {
   flex-grow: 1;
 }
 </style>
