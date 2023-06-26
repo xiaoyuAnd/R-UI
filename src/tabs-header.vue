@@ -3,7 +3,7 @@
     <slot></slot>
     <div class="line" ref="line"></div>
     <div class="tabsHeadIcon">
-      <slot name='actions'></slot>
+      <slot name="actions"></slot>
     </div>
   </div>
 </template>
@@ -11,24 +11,23 @@
 <script>
 export default {
   name: "Tabs-head",
-  inject: ['eventBus'],
+  inject: ["eventBus"],
   mounted() {
-    this.eventBus.$on('update:selected',
-        (name,vm) => {
-          let {width,bottom,left,right} = vm.$el.getBoundingClientRect()
-          const x = this.$refs.head.getBoundingClientRect().x
-          this.$refs.line.style.width = `${width}px`
-          this.$refs.line.style.left = `${left-x}px`
-        })
+    this.eventBus.$on("update:selected", (name, vm) => {
+      let { width, bottom, left, right } = vm.$el.getBoundingClientRect();
+      const x = this.$refs.head.getBoundingClientRect().x;
+      this.$refs.line.style.width = `${width}px`;
+      this.$refs.line.style.left = `${left - x}px`;
+      // this.$refs.line.style.left = `${left-x}px`
+    });
   },
-    // this.eventBus.$on('update:selected', (itemName, vm) => {
-    //   let {width, left} = vm.$el.getBoundingClientRect()
-    //   let headLeft =  this.$refs.head.getBoundingClientRect().x
-    //   this.$refs.line.style.width = `${width}px`
-    //   this.$refs.line.style.left = `${left - headLeft}px`
-    // })
-
-}
+  // this.eventBus.$on('update:selected', (itemName, vm) => {
+  //   let {width, left} = vm.$el.getBoundingClientRect()
+  //   let headLeft =  this.$refs.head.getBoundingClientRect().x
+  //   this.$refs.line.style.width = `${width}px`
+  //   this.$refs.line.style.left = `${left - headLeft}px`
+  // })
+};
 </script>
 
 <style scoped lang="scss">
@@ -43,7 +42,7 @@ export default {
     margin-left: auto;
     margin-right: 5em;
   }
-  >.line{
+  > .line {
     position: absolute;
     bottom: 0;
     border-bottom: 1px solid #3eaf7c;

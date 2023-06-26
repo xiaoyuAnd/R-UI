@@ -7,16 +7,16 @@
 <script>
 export default {
   name: "Tabs-body",
-  inject:['eventBus'],
+  inject: ["eventBus"],
   created() {
-    // console.log("爷爷给body的eventBus")
+    console.log("爷爷给body的eventBus");
     // console.log(this.eventBus)
-  }
-}
+  },
+};
 </script>
 
 <style scoped lang="scss">
-.tabsBody{
+.tabsBody {
   margin-top: 2em;
 }
 </style>
