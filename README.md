@@ -38,6 +38,7 @@
             'g-layout': Layout,
             'g-popover': Popover,
             'g-row': Row,
+            
             'g-sider': Sider,
             'g-tabs': Tabs,
             'g-tabs-head': TabsHead,
