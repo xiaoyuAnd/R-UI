@@ -38,6 +38,7 @@ export default {
 <style scoped lang="scss">
 @keyframes spin {
   0% {
+    // transform: rotate(100deg);
     transform: rotate(0deg);
   }
   100% {

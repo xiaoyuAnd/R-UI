@@ -10,7 +10,6 @@ export default {
   mounted() {
     for (let node of this.$el.children) {
       // console.log(node.nodeName.toLowerCase())
-      // console.log(node.nodeName.toLowerCase())
       if (node.nodeName.toLowerCase() !== "button") {
         console.warn(
           `g-Button-group的子元素应该全是button，而不是${node.nodeName}`
