@@ -9,43 +9,44 @@ export default {
   name: "Tabs-item",
   data() {
     return {
-      active: false
-    }
+      active: false,
+      // active: true
+    };
   },
   computed: {
     classes() {
       return {
         active: this.active,
-        disabled: this.disabled
-      }
-    }
+        disabled: this.disabled,
+      };
+    },
   },
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     name: {
       type: [String, Number],
-      require: true
-    }
+      require: true,
+    },
   },
-  inject: ['eventBus'],
+  inject: ["eventBus"],
   mounted() {
-    this.eventBus.$on('update:selected',
-        (name) => {
-          this.active = name === this.name
-          console.log(name)
-
-        })
+    this.eventBus.$on("update:selected", (name) => {
+      this.active = name === this.name;
+      console.log(name);
+    });
   },
   methods: {
     onclick() {
-      if(this.disabled){return}
-      this.eventBus.$emit('update:selected', this.name, this)
-    }
-  }
-}
+      if (this.disabled) {
+        return;
+      }
+      this.eventBus.$emit("update:selected", this.name, this);
+    },
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -58,11 +59,9 @@ export default {
   &.active {
     color: #3eaf7c;
   }
-  &.disabled{
+  &.disabled {
     color: gray;
     cursor: not-allowed;
   }
 }
-
-
 </style>

@@ -5,48 +5,51 @@
 </template>
 
 <script>
-import Vue from "vue"
+import Vue from "vue";
 export default {
   name: "Tabs",
-  props:{
-    selected:{
-      type:String,
-      required:true
+  props: {
+    selected: {
+      type: String,
+      required: true,
+      // required:false
     },
-    direction:{
-      type:String,
-      default:'horizontal',
-      validator(value){
-        return ['horizontal','vertical'].indexOf(value) >= 0
-      }
-    }
+    direction: {
+      type: String,
+      default: "horizontal",
+      validator(value) {
+        return ["horizontal", "vertical"].indexOf(value) >= 0;
+      },
+    },
   },
-  data(){
-    return{
-      eventBus:new Vue()
-    }
-  },
-  provide(){
+  data() {
     return {
-      eventBus : this.eventBus
-    }
+      eventBus: new Vue(),
+    };
   },
-  mounted () {
+  provide() {
+    return {
+      eventBus: this.eventBus,
+    };
+  },
+  mounted() {
     this.$children.forEach((vm) => {
       // console.log(vm.$options.name)
-      if (vm.$options.name === 'Tabs-head') {
+      if (vm.$options.name === "Tabs-head") {
         vm.$children.forEach((childVm) => {
-          if (childVm.$options.name === 'Tabs-item' && childVm.name === this.selected) {
-            console.log(childVm.$el)
-            this.eventBus.$emit('update:selected', this.selected, childVm)
+          if (
+            childVm.$options.name === "Tabs-item" &&
+            childVm.name === this.selected
+          ) {
+            console.log(childVm.$el);
+            this.eventBus.$emit("update:selected", this.selected, childVm);
           }
-        })
+        });
       }
-    })
-  }
-}
+    });
+  },
+};
 </script>
 
 <style scoped>
-
 </style>

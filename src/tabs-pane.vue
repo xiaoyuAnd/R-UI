@@ -7,38 +7,37 @@
 <script>
 export default {
   name: "Tabs-pane",
-  inject:['eventBus'],
-  data(){
-    return{
-      active:false
-    }
+  inject: ["eventBus"],
+  data() {
+    return {
+      active: false,
+      // active:true
+    };
   },
-  computed:{
-    classes(){
+  computed: {
+    classes() {
       return {
-        active: this.active
-      }
-    }
+        active: this.active,
+      };
+    },
   },
   props: {
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     name: {
       type: [String, Number],
-      require: true
-    }
+      require: true,
+    },
   },
   created() {
-    this.eventBus.$on('update:selected',
-        (name) => {
-          this.active = name ===this.name
-        })
+    this.eventBus.$on("update:selected", (name) => {
+      this.active = name === this.name;
+    });
   },
-}
+};
 </script>
 
 <style scoped lang="scss">
-
 </style>
